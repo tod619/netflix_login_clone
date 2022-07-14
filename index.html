@@ -11,5 +11,67 @@
     />
     <link rel="stylesheet" href="app.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="site-header">
+      <img src="img/logo.svg" alt="company logo" />
+    </header>
+
+    <div class="container login-form">
+      <form action="#">
+        <legend>Sign In</legend>
+        <div class="field">
+          <input type="text" id="username" title="username" />
+          <label for="username">Email or Phone Number</label>
+        </div>
+        <div class="field">
+          <input type="password" id="passowrd" title="password" />
+          <label for="password">Password</label>
+          <span>Show</span>
+        </div>
+
+        <div class="submit">
+          <input type="submit" value="Sign In" />
+        </div>
+
+        <div class="actions">
+          <div class="remember-me">
+            <input
+              type="checkbox"
+              name="remember"
+              id="remember"
+              title="Remember Me"
+            />
+            <label for="remember">Remember Me</label>
+          </div>
+
+          <div class="need-help">
+            <a href="#">Need Help?</a>
+          </div>
+        </div>
+      </form>
+
+      <div class="bottom-content">
+        <a href="#">Login With Facebook</a>
+        <a href="#" class="new-user"
+          >New to Netflix? <span>Sign Up Now.</span></a
+        >
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Questions? Call 08700-654-654</p>
+        <nav class="menu-footer">
+          <a href="#">Gift Card Terms</a>
+          <a href="#">Terms Of Use</a>
+          <a href="#">Privacy Statement</a>
+        </nav>
+
+        <select name="language" id="language" title="language" class="language">
+          <option value="eng">English</option>
+          <option value="esp">Spanish</option>
+        </select>
+      </div>
+    </footer>
+  </body>
 </html>

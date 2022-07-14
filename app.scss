@@ -9,7 +9,3 @@ html {
 *:before {
   @include box-sizing(inherit);
 }
-
-body {
-  background-color: blue;
-}
