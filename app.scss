@@ -9,3 +9,31 @@ html {
 *:before {
   @include box-sizing(inherit);
 }
+
+body {
+  background-color: $black;
+  color: $gray2;
+  font-family: $main_font;
+
+  @include tablet {
+    @include bg-image('bg.jpg');       
+  }
+}
+
+a {
+  color: $gray2;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.site-header img {
+  margin-top: 0.5rem;
+  max-width: 100px;
+
+  @include tablet {
+    max-width: 180px;
+    margin-left: 2rem;
+  }
+}
