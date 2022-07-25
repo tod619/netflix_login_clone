@@ -29,6 +29,17 @@
     border-radius: 5px;
     font-size: .8rem;
     padding: 1rem 0;
+    
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -ms-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+        background-color: darken($color, 10%);
+        cursor: pointer;
+    }
 }
 
 @mixin box-sizing($box-model) {

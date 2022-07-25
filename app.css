@@ -27,6 +27,11 @@ body {
   }
 }
 
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
 a {
   color: #8c8c8c;
   text-decoration: none;
@@ -109,5 +114,60 @@ form .field input:focus {
 form .field input:focus + label {
   font-size: 0.6rem;
   top: 0.5rem;
+}
+
+form input[type='submit'] {
+  background-color: #e50914;
+  padding: .5rem 1rem;
+  display: block;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  font-size: .8rem;
+  padding: 1rem 0;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 2rem;
+}
+
+form input[type='submit']:hover {
+  background-color: #b40710;
+  cursor: pointer;
+}
+
+form .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem 0;
+  margin-bottom: 8rem;
+}
+
+.bottom-content {
+  padding-bottom: 2rem;
+}
+
+.bottom-content a {
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bottom-content .new-user {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.bottom-content .new-user span {
+  color: #FFFFFF;
+  font-weight: bold;
+  margin-left: 0.5rem;
 }
 /*# sourceMappingURL=app.css.map */
