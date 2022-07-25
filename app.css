@@ -78,6 +78,11 @@ form span {
   position: absolute;
   right: 1rem;
   top: 1rem;
+  text-transform: uppercase;
+}
+
+form span:hover {
+  cursor: pointer;
 }
 
 form .field {
@@ -98,7 +103,7 @@ form .field label {
 }
 
 form .field input {
-  padding: 1.3rem 1rem 0.7rem 1rem;
+  padding: 1.3rem 1rem 0.9rem 1rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -146,11 +151,22 @@ form .actions {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.5rem 0;
-  margin-bottom: 8rem;
+  margin-bottom: 6rem;
+}
+
+form .actions a,
+form .actions label {
+  font-size: 0.8rem;
 }
 
 .bottom-content {
   padding-bottom: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .bottom-content {
+    padding-top: 6rem;
+  }
 }
 
 .bottom-content a {
@@ -169,5 +185,54 @@ form .actions {
   color: #FFFFFF;
   font-weight: bold;
   margin-left: 0.5rem;
+}
+
+.site-footer {
+  border-top: 1px solid #8c8c8c;
+  padding: 2rem 0 4rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .site-footer {
+    border-top: unset;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 1rem 0 3rem 0;
+  }
+}
+
+.site-footer .container {
+  max-width: 60%;
+}
+
+.site-footer .menu-footer {
+  padding: 0.5rem 0 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (min-width: 768px) {
+  .site-footer .menu-footer {
+    max-width: 50%;
+  }
+}
+
+.site-footer .menu-footer a {
+  font-size: 0.8rem;
+}
+
+.site-footer select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #000;
+  border-color: #454545;
+  color: #8c8c8c;
+  font-size: 0.8rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=app.css.map */
