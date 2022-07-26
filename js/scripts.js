@@ -12,6 +12,7 @@ function validateInput(e) {
 
     //console.log(e.target.value.length)
 
+    // Check the input to see if it is valid
     if(e.target.value.length === 0) {
         // Input empty fire an alert
         classes = states[1]
@@ -19,6 +20,16 @@ function validateInput(e) {
     } else {
         classes = states[0]
         console.log(classes)
+    }
+
+    // generate or remove the alert
+    if(classes === 'not-valid') {
+        const errorDiv = document.createElement('div')
+        errorDiv.appendChild(document.createTextNode('This field is mandatory'))
+        errorDiv.classList.add('alert')
+
+        // Inject error inside dom before next field
+        e.target.parentElement.parentElement.insertBefore(errorDiv, e.target.parentElement.nextElementSibling)
     }
 
 

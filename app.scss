@@ -25,6 +25,14 @@ body {
   margin: 0 auto;
 }
 
+.alert {
+  color: #e87c03;
+  display: block;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
 a {
   color: $gray2;
   text-decoration: none;
