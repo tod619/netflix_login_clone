@@ -24,12 +24,28 @@ function validateInput(e) {
 
     // generate or remove the alert
     if(classes === 'not-valid') {
-        const errorDiv = document.createElement('div')
-        errorDiv.appendChild(document.createTextNode('This field is mandatory'))
-        errorDiv.classList.add('alert')
 
-        // Inject error inside dom before next field
-        e.target.parentElement.parentElement.insertBefore(errorDiv, e.target.parentElement.nextElementSibling)
+        // If an alert doesn't allready exist, then add an alert
+        if(e.target.parentElement.nextElementSibling.classList[0] !== "alert") {
+
+            // Create the alert div
+             const errorDiv = document.createElement('div')
+            errorDiv.appendChild(document.createTextNode('This field is mandatory'))
+            errorDiv.classList.add('alert')
+
+            // Inject error inside dom before next field
+            e.target.parentElement.parentElement.insertBefore(errorDiv, e.target.parentElement.nextElementSibling)
+        }
+
+       
+    }else {
+        // If the input has something
+        // Check that the next element has the alert class
+        if(e.target.parentElement.nextElementSibling.classList[0] === "alert") {
+            // If it does remove that element
+            e.target.parentElement.nextElementSibling.remove()
+        }
+        
     }
 
 
