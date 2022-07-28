@@ -16,11 +16,16 @@ function validateInput(e) {
     if(e.target.value.length === 0) {
         // Input empty fire an alert
         classes = states[1]
-        console.log(classes)
+        //console.log(classes)
     } else {
         classes = states[0]
-        console.log(classes)
+        //console.log(classes)
     }
+
+    //Remove previous class
+    e.target.nextElementSibling.classList.remove(...states)
+    //Add new class
+    e.target.nextElementSibling.classList.add(classes)
 
     // generate or remove the alert
     if(classes === 'not-valid') {
@@ -44,6 +49,7 @@ function validateInput(e) {
         if(e.target.parentElement.nextElementSibling.classList[0] === "alert") {
             // If it does remove that element
             e.target.parentElement.nextElementSibling.remove()
+            
         }
         
     }
