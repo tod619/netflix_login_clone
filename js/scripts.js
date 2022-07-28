@@ -57,7 +57,34 @@ function validateInput(e) {
 
 }
 
-// Add eventlisners to inputs
+// Show or hide the password
+const togglePassword = document.querySelector('.toggle-password')
+
+
+//Add eventListner to togglePassword
+togglePassword.addEventListener('click', (e) => {
+
+    const passwordInput = document.getElementById('password')
+
+    // Toggle the show class off/on
+    e.target.classList.toggle('show')
+
+    //change the state of the input depending on the show class
+    if(e.target.classList.contains('show')) {
+        togglePassword.innerText = "HIDE"
+        //Change the type of the user input to text
+        passwordInput.type = 'text'
+
+
+    }else{
+        togglePassword.innerText = "SHOW"
+        passwordInput.type = 'password'
+
+    }
+
+})
+
+// Add eventlistners to inputs
 inputs.forEach(input => {
     input.addEventListener('blur', validateInput)
     input.addEventListener('input', validateInput)
